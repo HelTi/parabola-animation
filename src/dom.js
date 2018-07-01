@@ -50,33 +50,6 @@ export function getDomPosition(el) {
 }
 
 /**
- * 相对于文档的偏移量
- * @param el
- * @returns {{top: number, left: number}}
- */
-export function getDomOffset(el) {
-  let box = el.getBoundingClientRect();
-
-  return {
-    top: box.top + window.pageYOffset - document.documentElement.clientTop,
-    left: box.left + window.pageXOffset - document.documentElement.clientLeft
-  }
-}
-
-/**
- * 获取dom的style,包含所有的样式
- * @param el
- * @param attr
- * @returns {any}
- */
-export function getComputedStyle(el, attr) {
-  const win = el.ownerDocument.defaultView;
-  const computedStyle = win.getComputedStyle(el, null);
-
-  return attr ? computedStyle[attr] : computedStyle;
-}
-
-/**
  * dom字符串转换dom
  * <div><p>....</p><div/>
  * @param htmlStr

@@ -16,7 +16,6 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    library: 'parabolaAnimation',
     libraryTarget: 'umd'
   },
   module: {

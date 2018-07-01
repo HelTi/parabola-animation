@@ -1,8 +1,15 @@
 {
   "name": "parabola-animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "parabola-animation.js for buy-cart animation",
+  "private": false,
   "main": "dist/parabola-animate.js",
+  "unpkg": "dist/parabola-animate.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "jsnext:main": "dist/parabola-animate.js",
   "scripts": {
     "build": "webpack --config config/webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +20,9 @@
   },
   "keywords": [
     "animation",
-    "parabola"
+    "parabola",
+    "parabola animation",
+    "buy-cart animation"
   ],
   "author": "helti",
   "license": "MIT",

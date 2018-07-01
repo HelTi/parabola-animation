@@ -15,9 +15,7 @@
     </div>
 </body>
 <script>
-    console.log(parabolaAnimation);
-
-    let p = new parabolaAnimation.parabolaAnimation(null,{
+    let p = new parabolaAnimation(null,{
         startPos:{
             left:10,
             top:10
@@ -27,7 +25,7 @@
             top:100
         },
         endFunc:function(){
-            alert('end')
+            p.destroy();
         }
     })
 </script>
