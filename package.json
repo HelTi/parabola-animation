@@ -3,10 +3,10 @@
   "version": "1.0.1",
   "description": "parabola-animation.js for buy-cart animation",
   "private": false,
-  "main": "src/index.js",
+  "main": "dist/parabolaAnimation.js",
   "module": "src/index.js",
-  "unpkg": "dist/parabola-animate.js",
-  "jsdelivr": "dist/parabola-animate.js",
+  "unpkg": "dist/parabolaAnimation.js",
+  "jsdelivr": "dist/parabolaAnimation.js",
   "files": [
     "dist",
     "src"
