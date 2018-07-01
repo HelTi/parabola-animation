@@ -1,3 +1,5 @@
-function a() {
-    console.log('a')
-}
+import {parabolaAnimation} from './parabolaAnimation'
+
+
+export default parabolaAnimation;
+export {parabolaAnimation}

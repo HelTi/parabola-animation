@@ -1,5 +1,11 @@
-import {setStyle,htmlStringToDom} from "./dom";
-import {animationFrame, cancelAnimation} from "./requestAnimationFrame";
+import {
+  setStyle,
+  htmlStringToDom
+} from "./dom";
+import {
+  animationFrame,
+  cancelAnimation
+} from "./requestAnimationFrame";
 
 /**
  * 抛物线动画
@@ -11,7 +17,7 @@ import {animationFrame, cancelAnimation} from "./requestAnimationFrame";
 let noop = function () {
 
 };
-let ParabolaAnimate = function (element, ops) {
+let parabolaAnimation = function (element, ops) {
   let defaultOptions = {
     vertex_Rtop: 20,
     speed: 1.2,
@@ -22,16 +28,16 @@ let ParabolaAnimate = function (element, ops) {
   this.runElement = element !== null ? htmlStringToDom(element) : this.createBall();
   this.options = Object.assign(defaultOptions, ops);
 
-  if (this instanceof ParabolaAnimate) {
+  if (this instanceof parabolaAnimation) {
     this.initSettings();
   } else {
-    return new ParabolaAnimate(element, ops).initSettings();
+    return new parabolaAnimation(element, ops).initSettings();
   }
 
 };
 
-ParabolaAnimate.prototype = {
-  constructor: ParabolaAnimate,
+parabolaAnimation.prototype = {
+  constructor: parabolaAnimation,
   initSettings: function () {
     let settings = this.options,
       startPos = settings.startPos,
@@ -92,20 +98,20 @@ ParabolaAnimate.prototype = {
 
       anId = animationFrame(ani);
       if (count == steps) {
-          cancelAnimation(anId);
-          endFunc.apply(this);
+        cancelAnimation(anId);
+        endFunc.apply(this);
       }
     }
     ani()
   },
   createBall: function () {
     let ballDom = document.createElement('div');
-    setStyle(ballDom,{
-      width:'20px',
-      height:'20px',
-      backgroundColor:'#EC4646',
-      zIndex:'99999',
-      borderRadius:'50%'
+    setStyle(ballDom, {
+      width: '20px',
+      height: '20px',
+      backgroundColor: '#EC4646',
+      zIndex: '99999',
+      borderRadius: '50%'
     });
     return ballDom;
   },
@@ -116,4 +122,7 @@ ParabolaAnimate.prototype = {
 };
 
 
-export default ParabolaAnimate;
+export default parabolaAnimation;
+export {
+  parabolaAnimation
+}

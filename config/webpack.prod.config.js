@@ -10,7 +10,7 @@ const ROOT_PATH = path.resolve(__dirname, '../');
 
 module.exports = {
   entry: {
-    'parabola-animation': './src/index.js'
+    'parabola-animation': './src/parabolaAnimation.js'
   },
   output: {
     filename: '[name].js',
@@ -79,11 +79,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
-      root: ROOT_PATH,
-      verbose: true,
-      dry: false,
-    }),
     new UglifyJsPlugin({
       sourceMap: true
     }),
