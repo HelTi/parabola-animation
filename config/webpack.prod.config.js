@@ -16,12 +16,11 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
-    library:'parabolaAnimation',
+    library: 'parabolaAnimation',
     libraryTarget: 'umd'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
@@ -30,14 +29,12 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                minimize: true //css压缩
-              }
+          use: [{
+            loader: 'css-loader',
+            options: {
+              minimize: true
             }
-          ]
+          }]
         })
       },
       {
@@ -97,4 +94,3 @@ module.exports = {
     })
   ]
 };
-

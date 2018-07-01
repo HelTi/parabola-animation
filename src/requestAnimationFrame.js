@@ -21,5 +21,7 @@ if (window.requestAnimationFrame) {
   }
 }
 
-export {animationFrame,cancelAnimation}
-
+export {
+  animationFrame,
+  cancelAnimation
+}
