@@ -1,6 +1,6 @@
 {
   "name": "parabola-animation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "parabola-animation.js for buy-cart animation",
   "private": false,
   "main": "dist/parabolaAnimation.js",
