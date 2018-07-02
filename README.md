@@ -3,9 +3,22 @@
 #### 项目介绍
 js 抛物线动画 for mobile
 
-#### 使用：
+##### install
 
 ```js
+npm i parabola-animation
+
+import parabolaAnimation from 'parabola-animation'
+//or import {parabolaAnimation} from 'parabola-animation'
+
+```
+
+##### use
+```js
+/**
+ * element:dom (如果是null,则默认使用圆形dom; 自定义dom:htmlString:'<div>...</div>' )
+ * /
+ parabolaAnimation(element,options)
  let p = new parabolaAnimation(null,{
         startPos:{
             left:10, //相对屏幕的left
