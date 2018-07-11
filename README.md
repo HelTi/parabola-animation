@@ -9,9 +9,10 @@ js 抛物线动画 for mobile
 npm i parabola-animation
 
 import parabolaAnimation from 'parabola-animation'
-//or import {parabolaAnimation} from 'parabola-animation'
 
 ```
+##### or
+> <script src="../dist/parabola-animation.js"></script>
 
 ##### use
 ```js

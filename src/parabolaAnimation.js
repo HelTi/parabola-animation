@@ -121,8 +121,4 @@ parabolaAnimation.prototype = {
   }
 };
 
-
 export default parabolaAnimation;
-export {
-  parabolaAnimation
-}
